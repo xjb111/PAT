@@ -1,4 +1,4 @@
-//The name of the promble is 'A+B Format'
+//The name of the promble is 'A+B Format'.
 #include<iostream>
 #include<string>
 #include<cmath>
