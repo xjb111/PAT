@@ -1,0 +1,31 @@
+//The name of the promble is 'A+B Format'
+#include<iostream>
+#include<string>
+#include<cmath>
+using namespace std;
+
+int main()
+{
+    int a=0,b=0,sum=0;
+    string result,temp;
+    cin>>a;
+    cin>>b;
+    sum=a+b;
+    //10(6)=1000000,a和b相加的范围是[-2000000,2000000],需要加零个或者一个或者两个逗号。
+    while(sum>=1000 || sum<=-1000)
+    {
+        temp=to_string(abs(sum%1000));
+        while(temp.length()<3)
+        {
+            temp="0"+temp;
+        }
+        temp=","+temp;
+        result=temp+result;
+        temp.clear();
+        sum=sum/1000;
+    }
+    temp=to_string(sum);
+    result=temp+result;
+    cout<<result;
+    return 0;
+}
